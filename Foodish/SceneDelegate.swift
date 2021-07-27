@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let window = (scene as? UIWindowScene) else { return }
         
         self.window = UIWindow(windowScene: window)
-        self.window?.rootViewController = ViewController()
+        self.window?.rootViewController = UINavigationController(rootViewController: FoodProfileController())
         self.window?.makeKeyAndVisible()
     }
 

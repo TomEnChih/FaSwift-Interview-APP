@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,9 @@
 		D9A04B8626AFC8BA002A7B69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A04B8426AFC8BA002A7B69 /* LaunchScreen.storyboard */; };
 		D9A04B9426AFCACA002A7B69 /* FoodProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A04B9326AFCACA002A7B69 /* FoodProfileController.swift */; };
 		D9A04B9826AFCD98002A7B69 /* FoodProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A04B9726AFCD98002A7B69 /* FoodProfileView.swift */; };
+		D9A04B9C26AFD14A002A7B69 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D9A04B9B26AFD14A002A7B69 /* SnapKit */; };
+		D9A04BA026AFD756002A7B69 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A04B9F26AFD756002A7B69 /* ProfileHeader.swift */; };
+		D9E78AF526B0585C004B3406 /* LabelText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E78AF426B0585C004B3406 /* LabelText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,8 @@
 		D9A04B8726AFC8BA002A7B69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9A04B9326AFCACA002A7B69 /* FoodProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodProfileController.swift; sourceTree = "<group>"; };
 		D9A04B9726AFCD98002A7B69 /* FoodProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodProfileView.swift; sourceTree = "<group>"; };
+		D9A04B9F26AFD756002A7B69 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
+		D9E78AF426B0585C004B3406 /* LabelText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9A04B9C26AFD14A002A7B69 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,7 @@
 				D9A04B7926AFC8A4002A7B69 /* AppDelegate.swift */,
 				D9A04B7B26AFC8A4002A7B69 /* SceneDelegate.swift */,
 				D9A04B7D26AFC8A4002A7B69 /* ViewController.swift */,
+				D9E78AF326B05831004B3406 /* Extension */,
 				D9A04B8E26AFC9F3002A7B69 /* FoodProfile */,
 				D9A04B9226AFCA6D002A7B69 /* Storyboard */,
 				D9A04B8226AFC8BA002A7B69 /* Assets.xcassets */,
@@ -93,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				D9A04B9726AFCD98002A7B69 /* FoodProfileView.swift */,
+				D9A04B9F26AFD756002A7B69 /* ProfileHeader.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -103,6 +111,14 @@
 				D9A04B7F26AFC8A4002A7B69 /* Main.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		D9E78AF326B05831004B3406 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D9E78AF426B0585C004B3406 /* LabelText.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,6 +137,9 @@
 			dependencies = (
 			);
 			name = Foodish;
+			packageProductDependencies = (
+				D9A04B9B26AFD14A002A7B69 /* SnapKit */,
+			);
 			productName = Foodish;
 			productReference = D9A04B7626AFC8A4002A7B69 /* Foodish.app */;
 			productType = "com.apple.product-type.application";
@@ -148,6 +167,9 @@
 				Base,
 			);
 			mainGroup = D9A04B6D26AFC8A3002A7B69;
+			packageReferences = (
+				D9A04B9A26AFD14A002A7B69 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = D9A04B7726AFC8A4002A7B69 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -176,7 +198,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9A04B7E26AFC8A4002A7B69 /* ViewController.swift in Sources */,
+				D9E78AF526B0585C004B3406 /* LabelText.swift in Sources */,
 				D9A04B7A26AFC8A4002A7B69 /* AppDelegate.swift in Sources */,
+				D9A04BA026AFD756002A7B69 /* ProfileHeader.swift in Sources */,
 				D9A04B9826AFCD98002A7B69 /* FoodProfileView.swift in Sources */,
 				D9A04B7C26AFC8A4002A7B69 /* SceneDelegate.swift in Sources */,
 				D9A04B9426AFCACA002A7B69 /* FoodProfileController.swift in Sources */,
@@ -381,6 +405,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D9A04B9A26AFD14A002A7B69 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D9A04B9B26AFD14A002A7B69 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D9A04B9A26AFD14A002A7B69 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D9A04B6E26AFC8A4002A7B69 /* Project object */;
 }
