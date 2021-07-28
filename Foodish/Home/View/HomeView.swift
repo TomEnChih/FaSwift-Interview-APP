@@ -11,6 +11,9 @@ class HomeView: UIView {
 
     // MARK: - Properties
     
+    var didTapRandomButton: (()->Void)?
+    var didTapProducedButton: (()->Void)?
+    
     // MARK: - IBOutlets
     
     private let instructionLabel: UILabel = {
@@ -70,9 +73,8 @@ class HomeView: UIView {
     
     private let bottomImageView: CustomImageView = {
         let iv = CustomImageView()
-        iv.loadingImage(imageURL: "https://foodish-api.herokuapp.com/images/dessert/dessert18.jpg")
+        iv.loadingImage(url: URL(string: "https://foodish-api.herokuapp.com/images/dessert/dessert18.jpg")!)
         iv.contentMode = .scaleAspectFill
-//        iv.layer.masksToBounds = true
         return iv
     }()
     
@@ -81,8 +83,9 @@ class HomeView: UIView {
     private func autoLayout() {
         
         instructionLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(self.snp.topMargin).offset(100)
+            make.top.equalTo(self.snp.topMargin).offset(80)
             make.centerX.equalTo(self)
+            make.height.equalTo(20) ///不知為何不設會消失
         }
         
         foodAmountField.snp.makeConstraints { (make) in
@@ -125,6 +128,9 @@ class HomeView: UIView {
         addSubview(bottomImageView)
         
         autoLayout()
+        
+        randomButton.addTarget(self, action: #selector(handleRandom), for: .touchUpInside)
+        producedButton.addTarget(self, action: #selector(handleProduce), for: .touchUpInside)
     }
     
     required init?(coder: NSCoder) {
@@ -132,5 +138,13 @@ class HomeView: UIView {
     }
     
     // MARK: - Methods
+    
+    @objc func handleRandom() {
+        didTapRandomButton?()
+    }
+    
+    @objc func handleProduce() {
+        didTapProducedButton?()
+    }
 
 }

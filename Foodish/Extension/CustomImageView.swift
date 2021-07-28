@@ -13,8 +13,8 @@ class CustomImageView: UIImageView {
     //判斷圖片 url 是否相同
     var url: URL?
     
-    func loadingImage(imageURL: String){
-        let url = URL(string: imageURL)!
+    func loadingImage(url: URL){
+//        let url = URL(string: imageURL)!
         
         self.url = url
         //如果 cache，不網路請求
@@ -38,12 +38,12 @@ class CustomImageView: UIImageView {
                             CustomImageView.cache.setObject(cachedImage, forKey: url as AnyObject)
                             print("You get image from \(url)")
                         }else{
-                            guard let cachedImage = UIImage(data: data) else {
-                                print("image 取得錯誤")
-                                return
-                            }
-                            CustomImageView.cache.setObject(cachedImage, forKey: url as AnyObject)
-                            print("儲存 other image")
+//                            guard let cachedImage = UIImage(data: data) else {
+//                                print("image 取得錯誤")
+//                                return
+//                            }
+//                            CustomImageView.cache.setObject(cachedImage, forKey: url as AnyObject)
+//                            print("儲存 other image")
                         }
                     }
                     

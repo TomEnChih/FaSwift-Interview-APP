@@ -20,6 +20,8 @@
 		D9E78AF526B0585C004B3406 /* LabelText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E78AF426B0585C004B3406 /* LabelText.swift */; };
 		D9E78AFF26B0F944004B3406 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E78AFE26B0F944004B3406 /* HomeView.swift */; };
 		D9E78B0226B106EF004B3406 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E78B0126B106EF004B3406 /* CustomImageView.swift */; };
+		D9E78B0826B1334F004B3406 /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E78B0726B1334F004B3406 /* FoodModel.swift */; };
+		D9E78B0B26B137EB004B3406 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E78B0A26B137EB004B3406 /* ProfileCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		D9E78AF426B0585C004B3406 /* LabelText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelText.swift; sourceTree = "<group>"; };
 		D9E78AFE26B0F944004B3406 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D9E78B0126B106EF004B3406 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		D9E78B0726B1334F004B3406 /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
+		D9E78B0A26B137EB004B3406 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 		D9A04B8E26AFC9F3002A7B69 /* FoodProfile */ = {
 			isa = PBXGroup;
 			children = (
+				D9E78B0626B1333D004B3406 /* Model */,
 				D9A04B9126AFCA2E002A7B69 /* View */,
 				D9A04B8F26AFCA10002A7B69 /* Controller */,
 			);
@@ -105,6 +110,7 @@
 			children = (
 				D9A04B9726AFCD98002A7B69 /* FoodProfileView.swift */,
 				D9A04B9F26AFD756002A7B69 /* ProfileHeader.swift */,
+				D9E78B0A26B137EB004B3406 /* ProfileCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -149,6 +155,14 @@
 				D9E78AFE26B0F944004B3406 /* HomeView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D9E78B0626B1333D004B3406 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D9E78B0726B1334F004B3406 /* FoodModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,8 +244,10 @@
 				D9A04B7E26AFC8A4002A7B69 /* HomeController.swift in Sources */,
 				D9E78B0226B106EF004B3406 /* CustomImageView.swift in Sources */,
 				D9E78AF526B0585C004B3406 /* LabelText.swift in Sources */,
+				D9E78B0B26B137EB004B3406 /* ProfileCell.swift in Sources */,
 				D9A04B7A26AFC8A4002A7B69 /* AppDelegate.swift in Sources */,
 				D9A04BA026AFD756002A7B69 /* ProfileHeader.swift in Sources */,
+				D9E78B0826B1334F004B3406 /* FoodModel.swift in Sources */,
 				D9A04B9826AFCD98002A7B69 /* FoodProfileView.swift in Sources */,
 				D9E78AFF26B0F944004B3406 /* HomeView.swift in Sources */,
 				D9A04B7C26AFC8A4002A7B69 /* SceneDelegate.swift in Sources */,

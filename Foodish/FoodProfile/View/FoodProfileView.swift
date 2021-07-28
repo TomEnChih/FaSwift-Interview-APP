@@ -22,8 +22,9 @@ class FoodProfileView: UIView {
                 
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         
-        cv.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        cv.register(ProfileCell.self, forCellWithReuseIdentifier: ProfileCell.id)
         cv.register(ProfileHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: ProfileHeader.id)
+        cv.alwaysBounceVertical = true
         cv.backgroundColor = .white
         
         return cv
