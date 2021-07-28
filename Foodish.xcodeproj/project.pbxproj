@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		D9A04B7A26AFC8A4002A7B69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A04B7926AFC8A4002A7B69 /* AppDelegate.swift */; };
 		D9A04B7C26AFC8A4002A7B69 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A04B7B26AFC8A4002A7B69 /* SceneDelegate.swift */; };
-		D9A04B7E26AFC8A4002A7B69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A04B7D26AFC8A4002A7B69 /* ViewController.swift */; };
+		D9A04B7E26AFC8A4002A7B69 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A04B7D26AFC8A4002A7B69 /* HomeController.swift */; };
 		D9A04B8126AFC8A4002A7B69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A04B7F26AFC8A4002A7B69 /* Main.storyboard */; };
 		D9A04B8326AFC8BA002A7B69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9A04B8226AFC8BA002A7B69 /* Assets.xcassets */; };
 		D9A04B8626AFC8BA002A7B69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A04B8426AFC8BA002A7B69 /* LaunchScreen.storyboard */; };
@@ -18,13 +18,15 @@
 		D9A04B9C26AFD14A002A7B69 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D9A04B9B26AFD14A002A7B69 /* SnapKit */; };
 		D9A04BA026AFD756002A7B69 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A04B9F26AFD756002A7B69 /* ProfileHeader.swift */; };
 		D9E78AF526B0585C004B3406 /* LabelText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E78AF426B0585C004B3406 /* LabelText.swift */; };
+		D9E78AFF26B0F944004B3406 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E78AFE26B0F944004B3406 /* HomeView.swift */; };
+		D9E78B0226B106EF004B3406 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E78B0126B106EF004B3406 /* CustomImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D9A04B7626AFC8A4002A7B69 /* Foodish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9A04B7926AFC8A4002A7B69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9A04B7B26AFC8A4002A7B69 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D9A04B7D26AFC8A4002A7B69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D9A04B7D26AFC8A4002A7B69 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		D9A04B8026AFC8A4002A7B69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9A04B8226AFC8BA002A7B69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9A04B8526AFC8BA002A7B69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -33,6 +35,8 @@
 		D9A04B9726AFCD98002A7B69 /* FoodProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodProfileView.swift; sourceTree = "<group>"; };
 		D9A04B9F26AFD756002A7B69 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 		D9E78AF426B0585C004B3406 /* LabelText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelText.swift; sourceTree = "<group>"; };
+		D9E78AFE26B0F944004B3406 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D9E78B0126B106EF004B3406 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +72,8 @@
 			children = (
 				D9A04B7926AFC8A4002A7B69 /* AppDelegate.swift */,
 				D9A04B7B26AFC8A4002A7B69 /* SceneDelegate.swift */,
-				D9A04B7D26AFC8A4002A7B69 /* ViewController.swift */,
 				D9E78AF326B05831004B3406 /* Extension */,
+				D9E78AF926B0F913004B3406 /* Home */,
 				D9A04B8E26AFC9F3002A7B69 /* FoodProfile */,
 				D9A04B9226AFCA6D002A7B69 /* Storyboard */,
 				D9A04B8226AFC8BA002A7B69 /* Assets.xcassets */,
@@ -117,8 +121,34 @@
 			isa = PBXGroup;
 			children = (
 				D9E78AF426B0585C004B3406 /* LabelText.swift */,
+				D9E78B0126B106EF004B3406 /* CustomImageView.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		D9E78AF926B0F913004B3406 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D9E78AFD26B0F930004B3406 /* View */,
+				D9E78AFB26B0F922004B3406 /* Controller */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D9E78AFB26B0F922004B3406 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D9A04B7D26AFC8A4002A7B69 /* HomeController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D9E78AFD26B0F930004B3406 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D9E78AFE26B0F944004B3406 /* HomeView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,11 +227,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9A04B7E26AFC8A4002A7B69 /* ViewController.swift in Sources */,
+				D9A04B7E26AFC8A4002A7B69 /* HomeController.swift in Sources */,
+				D9E78B0226B106EF004B3406 /* CustomImageView.swift in Sources */,
 				D9E78AF526B0585C004B3406 /* LabelText.swift in Sources */,
 				D9A04B7A26AFC8A4002A7B69 /* AppDelegate.swift in Sources */,
 				D9A04BA026AFD756002A7B69 /* ProfileHeader.swift in Sources */,
 				D9A04B9826AFCD98002A7B69 /* FoodProfileView.swift in Sources */,
+				D9E78AFF26B0F944004B3406 /* HomeView.swift in Sources */,
 				D9A04B7C26AFC8A4002A7B69 /* SceneDelegate.swift in Sources */,
 				D9A04B9426AFCACA002A7B69 /* FoodProfileController.swift in Sources */,
 			);
