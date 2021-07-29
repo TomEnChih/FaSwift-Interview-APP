@@ -19,14 +19,14 @@ class ProfileHeader: UICollectionReusableView {
     
     private let profileImageView: UIImageView = {
         let iv = UIImageView()
-        iv.image = UIImage(named: "DZImage")
+        iv.image = UIImage(named: FoodProfile.share.profileImage)
         iv.clipsToBounds = true
         return iv
     }()
     
     private let postLabel: UILabel = {
         let label = UILabel()
-        label.setText(String1: "1.234", String2: "posts")
+        label.setText(String1: FoodProfile.share.post.number, String2: FoodProfile.share.post.type)
         label.numberOfLines = 0
         label.textAlignment = NSTextAlignment.center
         return label
@@ -34,7 +34,7 @@ class ProfileHeader: UICollectionReusableView {
     
     private let followsLabel: UILabel = {
         let label = UILabel()
-        label.setText(String1: "9.999", String2: "follows")
+        label.setText(String1: FoodProfile.share.followers.number, String2: FoodProfile.share.followers.type)
         label.numberOfLines = 0
         label.textAlignment = NSTextAlignment.center
         return label
@@ -42,7 +42,7 @@ class ProfileHeader: UICollectionReusableView {
     
     private let followingLabel: UILabel = {
         let label = UILabel()
-        label.setText(String1: "111", String2: "following")
+        label.setText(String1: FoodProfile.share.following.number, String2: FoodProfile.share.following.type)
         label.numberOfLines = 0
         label.textAlignment = NSTextAlignment.center
         return label
@@ -58,7 +58,7 @@ class ProfileHeader: UICollectionReusableView {
     
     private let followButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Follow", for: .normal)
+        button.setTitle(FoodProfile.share.followButtonTitle, for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         button.backgroundColor = .systemBlue
@@ -71,7 +71,7 @@ class ProfileHeader: UICollectionReusableView {
         button.backgroundColor = .systemBlue
         
         let config = UIImage.SymbolConfiguration(pointSize: 10, weight: .thin)
-        let image = UIImage(systemName: "arrowtriangle.down.fill", withConfiguration: config)
+        let image = UIImage(systemName: FoodProfile.share.optionImage, withConfiguration: config)
         
         button.setImage(image, for: .normal)
         button.tintColor = .white
@@ -82,28 +82,28 @@ class ProfileHeader: UICollectionReusableView {
     private let emailLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 15.4)
-        label.text = "tom105485916@gmail.com"
+        label.text = FoodProfile.share.email
         label.textColor = .black
         return label
     }()
     
     private let gridButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(named: "gridImage"), for: .normal)
+        button.setImage(UIImage(named: FoodProfile.share.gridImage), for: .normal)
         button.imageView?.layer.transform = CATransform3DMakeScale(0.6, 0.6, 0.6)
         return button
     }()
     
     private let listButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(named: "listImage"), for: .normal)
+        button.setImage(UIImage(named: FoodProfile.share.listImage), for: .normal)
         button.imageView?.layer.transform = CATransform3DMakeScale(0.6, 0.6, 0.6)
         return button
     }()
     
     private let taggedButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(named: "taggedImage"), for: .normal)
+        button.setImage(UIImage(named: FoodProfile.share.taggedImage), for: .normal)
         button.imageView?.layer.transform = CATransform3DMakeScale(0.6, 0.6, 0.6)
         return button
     }()

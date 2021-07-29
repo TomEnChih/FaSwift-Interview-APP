@@ -19,7 +19,7 @@ class HomeView: UIView {
     private let instructionLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 18.8)
-        label.text = "請輸入欲產生食物數量"
+        label.text = Home.share.instructionLabel
         label.textColor = .black
         label.textAlignment = NSTextAlignment.center
         return label
@@ -27,7 +27,7 @@ class HomeView: UIView {
     
     let foodAmountField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "數量"
+        textField.placeholder = Home.share.foodAmountFieldPlaceHolder
         textField.borderStyle = .roundedRect
         textField.clearButtonMode = .whileEditing
         textField.keyboardType = .numberPad
@@ -36,7 +36,7 @@ class HomeView: UIView {
     
     private let randomButton: UIButton = {
         let button = UIButton()
-        button.setTitle("亂數", for: .normal)
+        button.setTitle(Home.share.randomButtonTitle, for: .normal)
         button.setTitleColor(.systemBlue, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18.8)
         button.backgroundColor = .white
@@ -48,7 +48,7 @@ class HomeView: UIView {
     
     private let producedButton: UIButton = {
         let button = UIButton()
-        button.setTitle("產生", for: .normal)
+        button.setTitle(Home.share.producedButtonTitle, for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18.8)
         button.backgroundColor = .systemBlue
@@ -71,9 +71,8 @@ class HomeView: UIView {
         return view
     }()
     
-    private let bottomImageView: CustomImageView = {
+    let bottomImageView: CustomImageView = {
         let iv = CustomImageView()
-        iv.loadingImage(url: URL(string: "https://foodish-api.herokuapp.com/images/dessert/dessert18.jpg")!)
         iv.contentMode = .scaleAspectFill
         return iv
     }()

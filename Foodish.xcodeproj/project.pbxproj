@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D98760A626B2906000A90B71 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98760A526B2906000A90B71 /* ProfileModel.swift */; };
+		D98760AA26B294B300A90B71 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98760A926B294B300A90B71 /* HomeModel.swift */; };
 		D9A04B7A26AFC8A4002A7B69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A04B7926AFC8A4002A7B69 /* AppDelegate.swift */; };
 		D9A04B7C26AFC8A4002A7B69 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A04B7B26AFC8A4002A7B69 /* SceneDelegate.swift */; };
 		D9A04B7E26AFC8A4002A7B69 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A04B7D26AFC8A4002A7B69 /* HomeController.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D98760A526B2906000A90B71 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		D98760A926B294B300A90B71 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		D9A04B7626AFC8A4002A7B69 /* Foodish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9A04B7926AFC8A4002A7B69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9A04B7B26AFC8A4002A7B69 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D98760A826B2949F00A90B71 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D98760A926B294B300A90B71 /* HomeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D9A04B6D26AFC8A3002A7B69 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +147,7 @@
 		D9E78AF926B0F913004B3406 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D98760A826B2949F00A90B71 /* Model */,
 				D9E78AFD26B0F930004B3406 /* View */,
 				D9E78AFB26B0F922004B3406 /* Controller */,
 			);
@@ -161,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				D9E78B0726B1334F004B3406 /* FoodModel.swift */,
+				D98760A526B2906000A90B71 /* ProfileModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -250,7 +264,9 @@
 				D9E78B0826B1334F004B3406 /* FoodModel.swift in Sources */,
 				D9A04B9826AFCD98002A7B69 /* FoodProfileView.swift in Sources */,
 				D9E78AFF26B0F944004B3406 /* HomeView.swift in Sources */,
+				D98760AA26B294B300A90B71 /* HomeModel.swift in Sources */,
 				D9A04B7C26AFC8A4002A7B69 /* SceneDelegate.swift in Sources */,
+				D98760A626B2906000A90B71 /* ProfileModel.swift in Sources */,
 				D9A04B9426AFCACA002A7B69 /* FoodProfileController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

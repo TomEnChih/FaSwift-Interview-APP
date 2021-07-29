@@ -47,9 +47,9 @@ class FoodProfileController: UIViewController {
     // MARK: - Methods
     
     private func setNavigationItem() {
-        navigationItem.title = "董恩志"
+        navigationItem.title = FoodProfile.share.title
         
-        let image = UIImage(named: "arrow")
+        let image = UIImage(named: FoodProfile.share.leftBarButton)
         let transImage = resizeImage(image: image!, width: 20)
         let barButton = UIBarButtonItem(image: transImage.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleReturn))
         navigationItem.setLeftBarButton(barButton, animated: true)
@@ -68,14 +68,22 @@ class FoodProfileController: UIViewController {
                 if let error = error {
                     print("Error:",error.localizedDescription)
                 } else if let response = response as? HTTPURLResponse,let data = data{
-                    print("Status code:",response.statusCode)
+//                    print("Status code:",response.statusCode)
                     
                     let decoder = JSONDecoder()
                     
-                    if let food = try? decoder.decode(FoodModel.self, from: data){
+                    guard let food = try? decoder.decode(FoodModel.self, from: data) else{
+                        
+                        let alert = UIAlertController(title: "下載錯誤",
+                                                      message: "Status code: \(response.statusCode)", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                        
+                        return
+                    }
                         self.foodImages.append(food.image)
                         self.foodProfileView.profileCollectionView.reloadData()
-                    }
+                    
                 }
             }
         }.resume()
@@ -91,6 +99,14 @@ class FoodProfileController: UIViewController {
             return newImage
     }
 
+    private func handleError(error: String) {
+        let alert = UIAlertController(title: "Error",
+                                      message: error, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+        
+    }
     
 }
 
@@ -119,6 +135,7 @@ extension FoodProfileController: UICollectionViewDelegateFlowLayout,UICollection
         return CGSize(width: width, height: width)
     }
     
+    //MARK: Header
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         guard kind == UICollectionView.elementKindSectionHeader else {
             //footer

@@ -49,7 +49,8 @@ class ProfileCell: UICollectionViewCell {
     func configure(with model: String) {
         
         foodImageView.image = nil
-        foodImageView.loadingImage(url: URL(string: model)!)
+        foodImageView.loadingImage(url: URL(string: model)!) { (_) in
+        }
     }
     
 }
