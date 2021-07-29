@@ -29,11 +29,11 @@ extension UILabel {
         }
         
         //assigning diffrent fonts to both substrings
-        let font1: UIFont = UIFont.boldSystemFont(ofSize: 18)
+        let font1: UIFont = UIFont.boldSystemFont(ofSize: 18.2)
         let attributes1 = [NSMutableAttributedString.Key.font: font1,NSMutableAttributedString.Key.foregroundColor: UIColor.black]
         let attrString1 = NSMutableAttributedString(string: substring1, attributes: attributes1)
         
-        let font2: UIFont = UIFont.systemFont(ofSize: 15)
+        let font2: UIFont = UIFont.systemFont(ofSize: 13.2)
         let attributes2 = [NSMutableAttributedString.Key.font: font2,NSMutableAttributedString.Key.foregroundColor: UIColor.lightGray]
         let attrString2 = NSMutableAttributedString(string: substring2, attributes: attributes2)
         

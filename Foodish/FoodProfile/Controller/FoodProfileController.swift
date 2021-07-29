@@ -48,7 +48,11 @@ class FoodProfileController: UIViewController {
     
     private func setNavigationItem() {
         navigationItem.title = "董恩志"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "arrow"), style: .plain, target: self, action: #selector(handleReturn))
+        
+        let image = UIImage(named: "arrow")
+        let transImage = resizeImage(image: image!, width: 20)
+        let barButton = UIBarButtonItem(image: transImage.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleReturn))
+        navigationItem.setLeftBarButton(barButton, animated: true)
     }
     
     @objc func handleReturn() {
@@ -77,6 +81,16 @@ class FoodProfileController: UIViewController {
         }.resume()
         
     }
+    
+    private func resizeImage(image: UIImage, width: CGFloat) -> UIImage {
+            let size = CGSize(width: width, height: width)
+            let renderer = UIGraphicsImageRenderer(size: size)
+            let newImage = renderer.image { (_) in
+                image.draw(in: renderer.format.bounds)
+            }
+            return newImage
+    }
+
     
 }
 
@@ -121,7 +135,7 @@ extension FoodProfileController: UICollectionViewDelegateFlowLayout,UICollection
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         let width = view.frame.width
         
-        return CGSize(width: width, height: 200)
+        return CGSize(width: width, height: 236)
     }
     
 }

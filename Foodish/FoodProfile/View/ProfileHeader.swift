@@ -13,14 +13,14 @@ class ProfileHeader: UICollectionReusableView {
     
     static let id = "ProfileHeader"
     
-    private let imageSize: CGFloat = 100
+    private let imageSize: CGFloat = 85
     
     // MARK: - IBOutlets
     
     private let profileImageView: UIImageView = {
         let iv = UIImageView()
-        iv.backgroundColor = .lightGray
-        
+        iv.image = UIImage(named: "DZImage")
+        iv.clipsToBounds = true
         return iv
     }()
     
@@ -53,7 +53,6 @@ class ProfileHeader: UICollectionReusableView {
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
         stackView.alignment = .fill
-//        stackView.spacing = 0
         return stackView
     }()
     
@@ -61,23 +60,28 @@ class ProfileHeader: UICollectionReusableView {
         let button = UIButton()
         button.setTitle("Follow", for: .normal)
         button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         button.backgroundColor = .systemBlue
-        button.layer.cornerRadius = 6
+        button.layer.cornerRadius = 3
         return button
     }()
     
     private let optionButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .systemBlue
-        button.setImage(UIImage(systemName: "arrowtriangle.down.fill"), for: .normal)
+        
+        let config = UIImage.SymbolConfiguration(pointSize: 10, weight: .thin)
+        let image = UIImage(systemName: "arrowtriangle.down.fill", withConfiguration: config)
+        
+        button.setImage(image, for: .normal)
         button.tintColor = .white
-        button.layer.cornerRadius = 6
+        button.layer.cornerRadius = 3
         return button
     }()
     
     private let emailLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 15)
+        label.font = UIFont.systemFont(ofSize: 15.4)
         label.text = "tom105485916@gmail.com"
         label.textColor = .black
         return label
@@ -85,47 +89,22 @@ class ProfileHeader: UICollectionReusableView {
     
     private let gridButton: UIButton = {
         let button = UIButton()
-//        button.clipsToBounds = true
-//
-//        let config = UIImage.SymbolConfiguration(pointSize: 25, weight: .semibold)
-//        let image = UIImage(systemName: "square.grid.2x2", withConfiguration: config)
-//
-//        button.tintColor = .lightGray
-//        button.setImage(image, for: .normal)
-        
         button.setImage(UIImage(named: "gridImage"), for: .normal)
-        
+        button.imageView?.layer.transform = CATransform3DMakeScale(0.6, 0.6, 0.6)
         return button
     }()
     
     private let listButton: UIButton = {
         let button = UIButton()
-//        button.clipsToBounds = true
-//
-//        let config = UIImage.SymbolConfiguration(pointSize: 25, weight: .semibold)
-//        let image = UIImage(systemName: "square.grid.2x2", withConfiguration: config)
-//
-//        button.tintColor = .lightGray
-//        button.setImage(image, for: .normal)
-        
         button.setImage(UIImage(named: "listImage"), for: .normal)
-        
+        button.imageView?.layer.transform = CATransform3DMakeScale(0.6, 0.6, 0.6)
         return button
     }()
     
     private let taggedButton: UIButton = {
         let button = UIButton()
-//        button.clipsToBounds = true
-//
-//        let config = UIImage.SymbolConfiguration(pointSize: 25, weight: .semibold)
-//        let image = UIImage(systemName: "tag", withConfiguration: config)
-//
-//        button.tintColor = .lightGray
-//        button.setImage(image, for: .normal)
-
         button.setImage(UIImage(named: "taggedImage"), for: .normal)
-
-        
+        button.imageView?.layer.transform = CATransform3DMakeScale(0.6, 0.6, 0.6)
         return button
     }()
     
@@ -134,14 +113,12 @@ class ProfileHeader: UICollectionReusableView {
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
         stackView.alignment = .fill
-//        stackView.spacing = 0
         return stackView
     }()
     
     private let separateView: UIView = {
         let view = UIView()
         view.backgroundColor = .lightGray
-        
         return view
     }()
     
@@ -152,35 +129,36 @@ class ProfileHeader: UICollectionReusableView {
         profileImageView.layer.cornerRadius = imageSize/2
         
         profileImageView.snp.makeConstraints { (make) in
-            make.top.equalTo(self).offset(10)
-            make.left.equalTo(self).offset(10)
+            make.top.equalTo(self).offset(13)
+            make.left.equalTo(self).offset(13)
             make.size.equalTo(imageSize)
         }
         
         labelStackView.snp.makeConstraints { (make) in
-            make.top.equalTo(self).offset(10)
-            make.left.equalTo(profileImageView.snp.right).offset(20)
-            make.right.equalTo(self).offset(-10)
-            make.height.equalTo(70)
+            make.top.equalTo(self).offset(13)
+            make.left.equalTo(profileImageView.snp.right).offset(25)
+            make.right.equalTo(self).offset(-14)
+            make.height.equalTo(40)
         }
 
         followButton.snp.makeConstraints { (make) in
-            make.top.equalTo(labelStackView.snp.bottom)
-            make.left.equalTo(profileImageView.snp.right).offset(10)
-            make.right.equalTo(optionButton.snp.left).offset(-10)
-            make.height.equalTo(30)
+            make.top.equalTo(labelStackView.snp.bottom).offset(5)
+            make.left.equalTo(profileImageView.snp.right).offset(25)
+            make.right.equalTo(optionButton.snp.left).offset(-5)
+            make.height.equalTo(31)
         }
         
         optionButton.snp.makeConstraints { (make) in
-            make.top.equalTo(labelStackView.snp.bottom)
-            make.right.equalTo(self).offset(-20)
-            make.size.equalTo(30)
+            make.top.equalTo(labelStackView.snp.bottom).offset(5)
+            make.right.equalTo(self).offset(-14)
+            make.height.equalTo(31)
+            make.width.equalTo(35)
         }
         
         emailLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(profileImageView.snp.bottom).offset(10)
-            make.left.equalTo(self).offset(10)
-            make.bottom.equalTo(separateView.snp.top).offset(-10)
+            make.top.equalTo(profileImageView.snp.bottom).offset(32)
+            make.left.equalTo(self).offset(13)
+            make.bottom.equalTo(separateView.snp.top).offset(-35)
         }
         
         tabsStackView.snp.makeConstraints { (make) in
@@ -191,7 +169,7 @@ class ProfileHeader: UICollectionReusableView {
         
         separateView.snp.makeConstraints { (make) in
             make.right.left.equalTo(self)
-            make.height.equalTo(1)
+            make.height.equalTo(0.5)
             make.top.equalTo(tabsStackView)
         }
         

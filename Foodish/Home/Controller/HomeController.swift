@@ -20,6 +20,8 @@ class HomeController: UIViewController {
         view = homeView
         setNavigationItem()
         setButtonAction()
+        configureGesture()
+        
     }
 
     // MARK: - Methods
@@ -37,16 +39,28 @@ class HomeController: UIViewController {
             self?.homeView.foodAmountField.text = String(randomNumber)
         }
         
-        
         homeView.didTapProducedButton = { [weak self] in
             
             guard let text = self?.homeView.foodAmountField.text,let number = Int(text) else {
                 return
             }
+            self?.handleDismisskeyboard()
+            self?.homeView.foodAmountField.text = nil
             
             let vc = FoodProfileController(foodCount: number)
             self?.navigationController?.pushViewController(vc, animated: true)
         }
+    }
+    
+    private func configureGesture() {
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(handleDismisskeyboard))
+        gesture.numberOfTapsRequired = 1
+        gesture.numberOfTouchesRequired = 1
+        self.view.addGestureRecognizer(gesture)
+    }
+    
+    @objc func handleDismisskeyboard() {
+        homeView.foodAmountField.resignFirstResponder()
     }
     
 }

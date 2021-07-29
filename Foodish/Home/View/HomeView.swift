@@ -18,7 +18,7 @@ class HomeView: UIView {
     
     private let instructionLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.font = UIFont.boldSystemFont(ofSize: 18.8)
         label.text = "請輸入欲產生食物數量"
         label.textColor = .black
         label.textAlignment = NSTextAlignment.center
@@ -38,11 +38,11 @@ class HomeView: UIView {
         let button = UIButton()
         button.setTitle("亂數", for: .normal)
         button.setTitleColor(.systemBlue, for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18.8)
         button.backgroundColor = .white
-        button.layer.cornerRadius = 6
+        button.layer.cornerRadius = 14.9
         button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.black.cgColor
+        button.layer.borderColor = UIColor.lightGray.cgColor
         return button
     }()
     
@@ -50,9 +50,9 @@ class HomeView: UIView {
         let button = UIButton()
         button.setTitle("產生", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18.8)
         button.backgroundColor = .systemBlue
-        button.layer.cornerRadius = 6
+        button.layer.cornerRadius = 14.9
         return button
     }()
     
@@ -83,7 +83,7 @@ class HomeView: UIView {
     private func autoLayout() {
         
         instructionLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(self.snp.topMargin).offset(80)
+            make.top.equalTo(self.snp.topMargin).offset(75)
             make.centerX.equalTo(self)
             make.height.equalTo(20) ///不知為何不設會消失
         }
@@ -91,15 +91,15 @@ class HomeView: UIView {
         foodAmountField.snp.makeConstraints { (make) in
             make.top.equalTo(instructionLabel.snp.bottom).offset(10)
             make.centerX.equalTo(self)
-            make.width.equalTo(self).multipliedBy(0.8)
-            make.height.equalTo(50)
+            make.width.equalTo(self).multipliedBy(0.78)
+            make.height.equalTo(37)
         }
         
         buttonStackView.snp.makeConstraints { (make) in
             make.top.equalTo(foodAmountField.snp.bottom).offset(10)
             make.centerX.equalTo(self)
-            make.width.equalTo(self).multipliedBy(0.5)
-            make.height.equalTo(100)
+            make.width.equalTo(self).multipliedBy(0.56)
+            make.height.equalTo(98)
         }
         
         separateView.snp.makeConstraints { (make) in
